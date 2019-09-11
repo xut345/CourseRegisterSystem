@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  font-family:Arial;
+}
+
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 40%;
+  font-size: 14px;
+  padding: 8px 16px 8px 30px;
+  border: 1px solid #ddd;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 70%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 13px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+#myTable2 {
+  border-collapse: collapse;
+  width: 90%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable2 th, #myTable2 td {
+  text-align: center;
+  padding: 13px;
+}
+
+#myTable2 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+
+#myTable2 tr.header, #myTable2 tr:hover {
+  background-color: #f1f1f1;
+}
+
+#myTable3 {
+  border-collapse: collapse;
+  width: 70%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable3 th, #myTable3 td {
+  text-align: left;
+  padding: 13px;
+}
+
+#myTable3 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+
+#myTable3 tr.header, #myTable3 tr:hover {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,63 @@
+<html style="overflow-x:hidden;">
+<head>
+	<link rel="stylesheet" type="text/css" href="TopMenu.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+  <link rel="stylesheet" type="text/css" href="dropdown.css">
+  <link rel="stylesheet" type="text/css" href="viewCoursesTable.css">
+  <link rel="stylesheet" type="text/css" href="button.css">
+</head>
+<body>
+	<!--student personal information-->
+  <div style="position:relative;left:5%;">
+      	<div style="font-family:Arial;font-size:20px;position:relative;top:90px;">
+      		<p id=stuID>Student ID: </p>
+      		<p id="stuName">Studnet Name: </p>
+      		<p id="program">Program: </p>
+      	</div>
+    
+        <div class="dropdown" style="position:relative;left:-0%;top:120px;font-family:Arial;" title="Click here to Select a term you want to search for">
+              <button onclick="dropdownFunction()" class="dropbtn" id="selectTerm">Select Term Here</button>
+              <div id = myDropdown class="dropdown-content">
+                    <a href="#Fall2017" onclick="changeButtonName('selectTerm',this)">Fall 2017</a>
+                    <a href="#Winter2018" onclick="changeButtonName('selectTerm',this)">Winter 2018</a>
+                    <a href="#Winter2017" onclick="changeButtonName('selectTerm',this)">Winter 2017</a>
+              </div>
+        </div>
+        <a href="#myTable3"><button id="submitButton" onclick="showCourseTableIn()" style="background-color:#333;color: white;padding:12px 30px;border-radius:8px;font-size:14px;position:absolute;left:28%;top:242px;">Submit</button></a>
+    </div>
+       
+	
+   <table id="myTable3" style="position:relative;left:5%;top:150px;display:none">                                                      
+     <tr class="header">
+       <th>Courses</th><th>Title</th><th>Credit Hours</th><th>Section</th><th>Days</th><th>Time</th><th>Location</th><th>Campus</th><th>Status</th>
+     </tr>
+     <tbody id="courseReg"></tbody>   
+   </table>
+
+   <button id="dropBtn" style="background-color:#333;color: white;padding:12px 50px;border-radius:8px;font-size:14px;position:relative;left:5%;top:160px;display:none">Drop</button>
+      	<!--empty space for footer to fit better-->
+     <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
+
+	<!--*********page footer**************-->
+	<div class="footer">
+        <div id="footerContent">Courses Registration System</div>
+      </div>
+
+    <!--************top menu************-->
+    <ul style="font-family: Arial">
+        <li ><a href="coursesPage.html" style="text-decoration:none;"><menuItem href="#Courses">Courses</menuItem></a></li>
+        <li ><menuItem class="active">My Information</menuItem></li>
+        <li><a href="help.html" style="text-decoration:none;"><menuItem>Help</menuItem></a></li>
+        <li ><menuItem>Contact</menuItem></li>
+        <li style="float: right;"><a href="index.html" style="text-decoration:none;"><menuItem>Log Out</menuItem></a></li>
+    </ul>
+
+
+    <script type="text/javascript"></script>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jqueryScript1.js"></script>
+
+</body>
+</html>

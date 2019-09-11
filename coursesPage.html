@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html style="overflow-x:hidden;" lang="en-US">
+<head>
+    <link rel="stylesheet" type="text/css" href="TopMenu.css">
+    <link rel="stylesheet" type="text/css" href="dropdown.css">
+    <link rel="stylesheet" type="text/css" href="subjectsTab.css">
+    <link rel="stylesheet" type="text/css" href="viewCoursesTable.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="toTopButton.css">
+    <link rel="stylesheet" type="text/css" href="subjectTable.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <link rel="stylesheet" type="text/css" href="button.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!--*********************************************************************************************-->
+    <div id="google_translate_element" style="position:relative;top:60px;left:20px;width:80%;height:80%;"></div>
+        <button onclick="topFunction()" id="toTop" title="Go to top">Top</button>
+    <!--div style="width:60%;top:-60px;">
+        <p style="position:relative;top:70px;left:500px;font-size:12px;color:red;height:5px;">* are required! Search by courseID is optional.</p>
+        <p style="position:relative;left:440px;top:100px;font-size:20px;font-family:Arial;width:100px;">Term*</p>
+        <div class="dropdown" style="position:relative;left:520px;top:50px;font-family:Arial;" title="Click here to Select a term you want to search for">
+              <button onclick="dropdownFunction()" class="dropbtn" id="selectTerm">Select Term Here</button>
+              <div id = myDropdown class="dropdown-content">
+                    <a href="#Fall2017" onclick="changeButtonName('selectTerm',this)">Fall 2017</a>
+                    <a href="#Winter2018" onclick="changeButtonName('selectTerm',this)">Winter 2018</a>
+                    <a href="#Winter2017" onclick="changeButtonName('selectTerm',this)">Winter 2017</a>
+              </div>
+        </div>
+      <div style="position:relative;left:33%;">
+          <p style="position: relative;top:50px;font-size:20px;font-family:Arial">Subject*</p>
+          <button id="subject" style="position:relative;left:100px;top:0px;background-color:#f1f1f1;border:2px solid black;padding:8px 30px;font-size:12px;"
+          title="Select subject from the tab below">Select subject from the tab</button>
+      </div>
+      <div style="position:relative;left:32%;">
+          <p style="position:relative;top:0px;font-size:20px;font-family:Arial">Course ID</p>
+          <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for course ID.." title="Type in a Course ID" style="position:relative;top:-50px;left:116px;">
+      </div>
+    </div-->
+    <div style="width:60%;top:-60px;">
+      
+      <p style="position:relative;top:70px;left:64%;font-size:12px;color:red;height:5px;">* are required! Search by courseID is optional.</p>
+      <div style="position:relative;left:58%;"> 
+        <p style="position:relative;top:100px;font-size:20px;font-family:Arial;width:100px;">Term*</p>
+        <div class="dropdown" style="position:relative;top:50px;font-family:Arial;" title="Click here to Select a term you want to search for">
+              <button onclick="dropdownFunction()" class="dropbtn" id="selectTerm">Select Term Here</button>
+              <div id = myDropdown class="dropdown-content">
+                    <a href="#Fall2017" onclick="changeButtonName('selectTerm',this)">Fall 2017</a>
+                    <a href="#Winter2018" onclick="changeButtonName('selectTerm',this)">Winter 2018</a>
+                    <a href="#Winter2017" onclick="changeButtonName('selectTerm',this)">Winter 2017</a>
+              </div>
+        </div>
+      </div>
+
+
+        <p style="position:relative;left:54%;top:50px;font-size:20px;font-family:Arial">Subject*</p>
+        <button id="subject" style="position:relative;left:68%;top:0px;background-color:#f1f1f1;border:2px solid black;padding:8px 60px;font-size:12px;"
+        title="Select subject from the tab below">Select subject from the tab</button>
+        <p style="position:relative;left:52%;top:0px;font-size:20px;font-family:Arial">Course ID</p>
+        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for course ID.." title="Type in a Course ID" style="position:relative;top:-50px;left:68%;">
+
+    </div>
+    <!--subject table with tab******************************************************************-->
+    <div style="position:relative;left:20%;">
+        <div style="position:relative;top:-35px;">
+            <button class="tablink" onclick="openTab('A-D', this)" id="defaultOpen">A-D</button>
+            <button class="tablink" onclick="openTab('E-H', this)">E-H</button>
+            <button class="tablink" onclick="openTab('I-L', this)">I-L</button>
+            <button class="tablink" onclick="openTab('M-P', this)">M-P</button>
+            <button class="tablink" onclick="openTab('Q-T', this)">Q-T</button>
+            <button class="tablink" onclick="openTab('U-Z', this)">U-Z</button>
+        </div>
+           <div style="font-family:Arial;position:relative;top:-5px;">
+              <div id="A-D" class="tabcontent">
+                <table id="sTable">
+                  <tr>
+                    <td><input type="radio" name="sel" value="Aboriginal Business Studies" id="Aboriginal Business Studies" onclick="checkboxCheck('Aboriginal Business Studies')">Aboriginal Business Studies</td>
+                    <td><input type="radio" name="sel" id="Biological Sciences" value="Biological Sciences" onclick="checkboxCheck('Biological Sciences')">Biological Sciences</td>
+                    <td><input type="radio" name="sel" id="Computer Science" value="Computer Science" onclick="checkboxCheck('Computer Science')">Computer Science</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="sel" id="Accounting" value="Accounting" onclick="checkboxCheck('Accounting')">Accounting</td>
+                    <td><input type="radio" name="sel" id="Civil Engineering" value="Civil Engineering" onclick="checkboxCheck('Civil Engineering')">Civil Engineering</td>
+                    <td><input type="radio" name="sel" id="Classics" value="Classics" onclick="checkboxCheck('Classics')">Classics</td>
+                   </tr>
+                  <tr>
+                    <td><input type="radio" name="sel" id="Biochemistry" value="Biochemistry" onclick="checkboxCheck('Biochemistry')">Biochemistry</td>
+                    <td><input type="radio" name="sel" id="Dentistry" value="Dentistry" onclick="checkboxCheck('Dentistry')">Dentistry</td>
+                  </tr>
+                </table>
+              </div>
+              <!--*****table E-H ****************-->
+              <div id="E-H" class="tabcontent">
+                  <table id="sTable">
+                  <tr>
+                    <td><input type="radio" name="sel" value="Economics" id="Economics" onclick="checkboxCheck('Economics')">Economics</td>
+                    <td><input type="radio" name="sel" id="Finance" value="Finance" onclick="checkboxCheck('Finance')">Finance</td>
+                    <td><input type="radio" name="sel" id="Geography" value="Geography" onclick="checkboxCheck('Geography')">Geography</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="sel" id="Education" value="Education" onclick="checkboxCheck('Education')">Education</td>
+                    <td><input type="radio" name="sel" id="Food Science" value="Food Science" onclick="checkboxCheck('Food Science')">Food Science</td>
+                   </tr>
+                </table>
+                </div>
+                <div id="I-L" class="tabcontent">
+                  <table id="sTable">
+                  <tr>
+                    <td><input type="radio" name="sel" id="Icelandic" value="Icelandic" onclick="checkboxCheck('Icelandic')">Icelandic</td>
+                    <td><input type="radio" name="sel" id="Judaic Civilization" value="Judaic Civilization" onclick="checkboxCheck('Judaic Civilization')">Judaic Civilization</td>
+                    <td><input type="radio" name="sel" id="Law" value="Law" onclick="checkboxCheck('Law')">Law</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="sel" value="International Business" id="International Business" onclick="checkboxCheck('International Business')">International Business</td>
+                    <td><input type="radio" name="sel" id="Latin" value="Latin" onclick="checkboxCheck('Latin')">Latin</td>
+                    <td><input type="radio" name="sel" id="Linguistics" value="Linguistics" onclick="checkboxCheck('Linguistics')">Linguistics</td>
+                   </tr>
+                  <tr>
+                     <td><input type="radio" name="sel" id="Italian" value="Italian" onclick="checkboxCheck('Italian')">Italian</td>
+                     <td><input type="radio" name="sel" id="Leadership and Organizations" value="Leadership and Organizations" onclick="checkboxCheck('Leadership and Organizations')">Leadership and Organizations</td>
+                  </tr>
+                </table>
+                </div>
+                <div id="M-P" class="tabcontent">
+                  <table id="sTable">
+                  <tr>
+                    <td><input type="radio" name="sel" value="Management" id="Management" onclick="checkboxCheck('Management')">Management</td>
+                    <td><input type="radio" name="sel" id="Nursing" value="Nursing" onclick="checkboxCheck('Nursing')">Nursing</td>
+                    <td><input type="radio" name="sel" id="Philosophy" value="Philosophy" onclick="checkboxCheck('Philosophy')">Philosophy</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="sel" id="Mathematics" value="Mathematics" onclick="checkboxCheck('Mathematics')">Mathematics</td>
+                    <td><input type="radio" name="sel" id="Operations Management/Research" value="Operations Management/Research" onclick="checkboxCheck('Operations Management/Research')">Operations Management/Research</td>
+                   </tr>
+                  <tr>
+                     <td><input type="radio" name="sel" id="Microbiology" value="Microbiology" onclick="checkboxCheck('Microbiology')">Microbiology</td>
+                     <td><input type="radio" name="sel" id="Pharmacy" value="Pharmacy" onclick="checkboxCheck('Pharmacy')">Pharmacy</td>
+                  </tr>
+                </table>
+                </div>
+                <div id="Q-T" class="tabcontent">
+                  <table id="sTable">
+                  <tr>
+                    <td><input type="radio" name="sel" value="Religion" id="Religion" onclick="checkboxCheck('Religion')">Religion</td>
+                    <td><input type="radio" name="sel" id="Spanish" value="Spanish" onclick="checkboxCheck('Spanish')">Spanish</td>
+                    <td><input type="radio" name="sel" id="Statistics" value="Statistics" onclick="checkboxCheck('Statistics')">Statistics</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="sel" id="Russian" value="Russian" onclick="checkboxCheck('Russian')">Russian</td>
+                    <td><input type="radio" name="sel" id="Sociology" value="Sociology" onclick="checkboxCheck('Sociology')">Sociology</td>
+                    <td><input type="radio" name="sel" id="Theatre" value="Theatre" onclick="checkboxCheck('Theatre')">Theatre</td>
+                   </tr>
+                </table>
+                </div>
+                <div id="U-Z" class="tabcontent">
+                  <table id="sTable">
+                  <tr>
+                    <td><input type="radio" name="sel" id="Ukrainian" value="Ukrainian" onclick="checkboxCheck('Ukrainian')">Ukrainian</td>
+                    <td><input type="radio" name="sel" id="Women and Gender Studies" value="Women and Gender Studies" onclick="checkboxCheck('Women and Gender Studies')">Women and Gender Studies</td>
+                  </tr>
+                </table>
+                </div>
+          </div>
+      </div>
+
+    <!--******************************************************************************************-->
+      <a href="#myTable"><button id="submitButton" onclick="showCourseTable()" style="background-color:#333;color: white;padding:12px 50px;border-radius:8px;font-size:14px;position:relative;left:44%;top:10px;">
+          Submit
+      </button></a>
+
+    <!--course table, use the css sheet: viewCoursesTables*********************************-->
+      <table id="myTable" style="position:relative;left:16%;top:70px;display:none;">
+          <tr class="header">
+            <th>Course ID</th><th>Course Title</th><th>Credit</th><th>Check</th>
+          </tr>
+          <tbody id="tbodyID"></tbody>
+      </table>
+
+
+      <table id="myTable2" style="position:relative;left:4%;top:70px;display:none;">
+          <tr class="header">
+            <th>Course ID</th><th>Course Title</th><th>Credit</th><th>CRN</th><th>SEC</th><th>CMP</th><th>DAYS</th><th>TIME</th>
+            <th>CAP</th><th>ACT</th><th>INSTRUCTOR</th><th>DATE</th><th>LOCATION</th><th>SELECT</th>
+          </tr>
+          <tbody id="tbodyID2"></tbody>
+      </table>
+
+      <button id="registerBtn" onclick="showRegistModal()" style="background-color:#333;color: white;padding:12px 50px;border-radius:8px;font-size:14px;position:relative;left:44%;top:100px;display:none">
+          Register
+      </button>
+
+    <!--menu and footer ***************************************************************************-->
+      <p>
+        <br><br><br><br><br><br><br><br><br><br>
+      </p>
+
+      <div class="footer">
+        <div id="footerContent">Courses Registration System</div>
+      </div>
+
+        <ul style="font-family: Arial">
+          <li ><menuItem class="active">Courses</menuItem></li>
+          <li ><a href="myInformationPage.html" style="text-decoration:none;"><menuItem >My Information</menuItem></a></li>
+          <li><a href="help.html" style="text-decoration:none;"><menuItem>Help</menuItem></li></a>
+          <li ><menuItem>Contact</menuItem></li>
+          <li style="float: right;"><a href="index.html" style="text-decoration:none;"><menuItem >Log Out</menuItem></a></li>
+        </ul>
+    
+    <!--modal********************-->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="alertClose" class="close">&times;</span>
+          <i class="material-icons">&#xe001;</i>
+        </div>
+        <div class="modal-body">
+          <p id="alertMessage">Please Select term and subject!</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="registModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="registSpan" class="close">&times;</span>
+          <i id="registClose" class="material-icons">&#xe001;</i>
+        </div>
+        <div class="modal-body">
+          <p id="alertMessage">Regist successful!</p>
+        </div>
+      </div>
+    </div>
+
+    
+  <!--functions for this page-->
+  <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="jqueryScript1.js"></script>
+
+</body>
+</html>

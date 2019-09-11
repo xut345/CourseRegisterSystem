@@ -1,0 +1,18 @@
+/*css sheet for subject tables in the select tab(the yellow one)*/
+* {
+  box-sizing: border-box;
+  font-family:Arial;
+}
+
+#sTable {
+  position:relative;left:-10px;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+#sTable th, #sTable td {
+  text-align: left;
+  padding: 4px;
+}
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" type="text/css" href="TopMenu.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="toTopButton.css">
+    <link rel="stylesheet" type="text/css" href="helpElement.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="script.js"></script>
+
+	<div class="helpText" style="top:60px;left: 40px;">
+		<h1>Tutorial</h1>
+		<h2>View available courses and register a course:</h2>
+		<p>1. Click "Courses" in the top menu.</p>
+		<p>2. Click "term" select box to select a term.</p>
+		<p>3. Select the program at the yellow tab, you can only select one program once.</p>
+    <p>4. Click the black "Submit" button.</p>
+    <p>5. All courses are showing under the submit button now. If needed, you can also translate the current page to other languages by clicking the google translate box at left corner.</p>
+    <p>6. If you want to find a particular course, entre the course ID in the "Course ID" search box. If you want to go to the top of current page, click the red "top" button at right corner.</p>
+		<p>7. Click "view sections" to view the course' details.</p>
+    <p>8. The table will show all sections in the current course. Select one section that you want to regist. Then click the black "Register" button.</p>
+    <BR>
+    <h2>Drop a course:</h2>
+    <p>1. Click "My Information" in the top menu.</p>
+    <p>2. Click "term" select box to select a term.</p>
+    <p>4. Click the black "Submit" button.</p>
+    <p>5. All courses you registed this term are showing under the submit button now.</p>
+    <p>8. Select the courses you want to drop. Then click the black "Drop" button to drop the courses.</p>
+  </div>
+
+  <div style="position:relative;top:780px;">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="help1.jpg" style="width:100%;height:80%;border-style: solid;">
+        </div>
+        <div class="mySlides fade">
+          <img src="help2.jpg" style="width:100%;height:80%;border-style: solid;">
+        </div>
+        <div class="mySlides fade">
+          <img src="help3.jpg" style="width:100%;height:80%;border-style: solid;">
+        </div>
+        <div class="mySlides fade">
+          <img src="help4.jpg" style="width:100%;height:80%;border-style: solid;">
+        </div>
+        <div class="mySlides fade">
+          <img src="help5.jpg" style="width:100%;height:80%;border-style: solid;">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+  </div>
+
+
+	<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
+      <div class="footer">
+        <p>Courses Registration System</p>
+      </div>
+
+        <ul style="font-family: Arial">
+          <li ><a href="coursesPage.html" style="text-decoration:none;"><menuItem >Courses</menuItem></a></li>
+          <li ><a href="myInformationPage.html" style="text-decoration:none;"><menuItem >My Information</menuItem></a></li>
+          <li><menuItem class="active">Help</menuItem></li>
+          <li ><menuItem>Contact</menuItem></li>
+          <li style="float: right;"><a href="index.html" style="text-decoration: none;"><menuItem >Log Out</menuItem></a></li>
+        </ul>
+</body>
+
+<script type="text/javascript">
+  var slideIndex = 1;
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+
+      showSlides(slideIndex);
+      currentSlide(1);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+</script>
+
+</html>
